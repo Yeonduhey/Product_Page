@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+header,
+section,
+article,
+aside,
+nav,
+main,
+footer {
+    display: block;
+}
+
+header:after,
+section:after,
+article:after,
+aside:after,
+nav:after,
+main:after,
+footer:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+#products {}
+
+#products .total_pd {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#products .total_pd .sort_button {
+    padding-bottom: 20px;
+}
+
+#products .total_pd .sort_button button {
+    padding: 10px 20px;
+    background: #ffffff;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+#products .total_pd .sort_button button:hover,
+#products .total_pd .sort_button button.active {
+    background: #9eff9b;
+}
+
+#products .total_pd .sort_button .sort_sel {
+    padding: 10px 20px; 
+    background-color: #ffffff;
+    background-image: url(../img/arrow-down.png);
+    background-repeat: no-repeat;
+    background-position: 96% 50%;
+    background-size: auto 14px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    
+}
+#products .total_pd .sort_button .sort_sel option {}
+
+.pd_frame {
+    width: 100%;
+    height: auto;
+    padding: 20px 20px 0;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row; /* 자식요소를 가로정방향(좌측부터)으로 배치 - (기본값) */
+    justify-content: flex-start; /* 부모영역을 기준으로 좌측으로 정렬 */
+    align-items: flex-start; /* 부모 영역의 세로방향에서 상단으로 정렬 */
+    flex-wrap: wrap; /* 부모의 영역과는 상관없이 실제 자식의 가로폭이 적용. 
+    자식의 가로폭이 클 경우 다음줄로 내린다.(복수라인 구성) */
+}
+
+.pd_frame .pd_box {
+    width: calc(25% - 20px);
+    height: auto;
+    margin: 0 10px 20px;
+    border: 1px solid #bbbbbb;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 0 8px #aaaaaa;
+}
+
+.pd_frame .pd_box .pd_photo {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.pd_frame .pd_box .pd_photo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+
+}
+
+.pd_frame .pd_box .pd_info {
+    width: 100%;
+    height: auto;
+}
+
+.pd_frame .pd_box .pd_info .pd_title {
+    font-size: 20px;
+    color: #555555;
+    padding-top: 10px;
+}
+
+
+.pd_frame .pd_box .pd_info .pd_text {
+    font-size: 16px;
+    color: #888888;
+    padding: 10px 0;
+}
+
+
+.pd_frame .pd_box .pd_info .pd_etc {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #bbbbbb;
+    padding: 10px 0;
+}
+
+.pd_frame .pd_box .pd_info .pd_ect .pd_price {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.pd_frame .pd_box .pd_info .pd_ect .pd_date {
+    font-size: 14px;
+}
+
+.pd_frame .pd_box .pd_info .fav {
+    text-align: right;
+    padding: 0 0 10px;
+}
+
+.pd_frame .pd_box .pd_info .fav span {
+    color: red;
+}
+
+.pager {
+    padding: 20px 0; 
+    text-align: center;
+    font-size: 0;
+}
+
+.pager li {
+    display: inline-block;
+    width: 36px;    
+    font-size: 17px;
+    line-height: 1;
+    border-right: 1px solid #888888;
+    padding: 0 5px;
+}
+
+.pager li:last-child {
+    border-right: none;
+}
+
+.pager li.active {
+    color: red;
+}
